@@ -1,0 +1,2 @@
+# Clinical-Trials-Intelligence-report---insight-reports-from-clinicaltrials.gov
+Analysed 3700+ clinical trials (2005–2025) by 850+ global sponsors from www.clinicaltrial.gov to surface R&amp;D signals, sponsor failure patterns, drug pipeline bottlenecks. XGBoost model (AUC 0.87) predicts trial termination risk., 20-year forecast, sponsor intelligence reports, competitive dashboard &amp; a Dockerised FastAPI for realtime reports
