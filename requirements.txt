@@ -1,0 +1,38 @@
+# Clinical Trials Strategic Intelligence Platform
+# Full project dependencies: covers both the Jupyter notebook analysis
+# and the FastAPI service (api/requirements.txt has API-only pinned versions).
+#
+# Install everything:
+#   pip install -r requirements.txt
+#
+# Python >= 3.10 required
+
+# ── Data Handling ─────────────────────────────────────────────────────────────
+pandas>=2.0.0
+numpy>=1.24.0
+
+# ── Visualisation ─────────────────────────────────────────────────────────────
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# ── Statistics and Time Series ────────────────────────────────────────────────
+scipy>=1.10.0
+statsmodels>=0.14.0
+
+# ── Machine Learning ──────────────────────────────────────────────────────────
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+
+# ── Model Persistence ─────────────────────────────────────────────────────────
+joblib>=1.3.0
+
+# ── API (FastAPI service inside api/) ─────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.7.0
+
+# ── Notebook Runtime ──────────────────────────────────────────────────────────
+jupyter>=1.0.0
+notebook>=7.0.0
+ipykernel>=6.25.0
+nbformat>=5.9.0
