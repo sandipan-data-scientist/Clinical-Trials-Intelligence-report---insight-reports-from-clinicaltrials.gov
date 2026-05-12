@@ -8,7 +8,6 @@ End-to-end healthcare data science project analysing 18,000+ clinical trials fro
 
 Raw clinical trial registration data from ClinicalTrials.gov is messy, incomplete, and spread across 30+ columns. This project turns it into actionable intelligence across three layers:
 
-**Analysis layer (Jupyter notebook):** A 16-section, fully narrated pipeline from raw CSV to published charts. Every statistical and machine learning decision is explained in plain language with mathematical justification, written to be readable by data scientist and interpretable by a non-technical business audience at the same time.
 
 **Insight layer (dashboards and reports):** A single-figure competitive intelligence dashboard summarising the entire 20-year dataset, plus a reusable sponsor-level report function that regenerates nine charts for any named sponsor by changing one variable.
 
