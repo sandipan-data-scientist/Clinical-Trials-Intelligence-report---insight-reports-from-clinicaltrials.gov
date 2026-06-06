@@ -10,8 +10,7 @@ Prepared by Sandipan Acharjee
 
 ## Live Demo
 
-Streamlit App: https://share.streamlit.io/YOUR_USERNAME/clinical-trials-intelligence/app.py
-
+[Click Here to check out the Platform](https://clinical-trials-intelligence-report.streamlit.app/)
 
 ## Project Structure
 
@@ -44,15 +43,6 @@ Streamlit App: https://share.streamlit.io/YOUR_USERNAME/clinical-trials-intellig
     pip install -r requirements.txt
     # place raw_ct_data.csv in data/
     streamlit run app.py
-
-
-## Streamlit Cloud Deployment
-
-1. Push this repo to GitHub (include data/raw_ct_data.csv).
-2. Go to share.streamlit.io and click New App.
-3. Select your repository, branch (main), and set Main file path to app.py.
-4. Click Deploy. Streamlit Cloud installs requirements.txt automatically.
-5. The model trains on first load and is cached for the session.
 
 
 ## Running the FastAPI Service
