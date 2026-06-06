@@ -1,0 +1,13 @@
+[theme]
+primaryColor = "#ff3535"
+backgroundColor = "#000000"
+secondaryBackgroundColor = "#4c505a"
+textColor = "#fefefe"
+font = "sans serif"
+
+[server]
+maxUploadSize = 50
+headless = true
+
+[runner]
+magicEnabled = false
