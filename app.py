@@ -127,7 +127,7 @@ viz = Visualizer(df)
 # sidebar navigation
 with st.sidebar:
     st.image(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/ClinicalTrials.gov_logo.png/320px-ClinicalTrials.gov_logo.png",
+        "https://crir.ca/wp-content/uploads/2020/05/nihclinicaltrials.png",
         use_column_width=True
     )
     st.markdown("### Navigation")
@@ -182,8 +182,8 @@ if section == "Project Overview":
     This platform analyses <strong>3,792 clinical trials</strong> across <strong>957 sponsors</strong>
     spanning 20 years of global pharmaceutical R&D activity sourced from ClinicalTrials.gov.
     It delivers sponsor-level failure intelligence, therapeutic domain forecasting, competitive
-    landscaping, and a machine learning model that predicts trial termination risk before resources
-    are committed. Use the sidebar to navigate through each analysis section.
+    landscaping, and a machine learning model that predicts trial termination risk. Use the sidebar 
+    to navigate through each analysis section.
     </div>
     """, unsafe_allow_html=True)
 
@@ -209,7 +209,7 @@ if section == "Project Overview":
     with col_b:
         st.markdown("""
         **ML Risk Prediction**
-        A Gradient Boosting classifier trained on phase, duration, sponsor history, and funder
+        A XGBoost classifier trained on phase, duration, sponsor history, and funder
         signals predicts trial termination probability per trial.
         """)
     with col_c:
@@ -504,7 +504,7 @@ elif section == "Domain Trends and Forecasts":
 elif section == "ML Model Results":
     st.title("ML Model: Trial Failure Prediction")
     section_intro(
-        "A binary classification model trained to predict whether a trial will be terminated "
+        "A binary classification model (Logistic Regression) trained to predict whether a trial will be terminated "
         "before completion. We compare three classifiers and select the best by AUC-ROC, "
         "which correctly handles class imbalance. The winning model scores every trial in the "
         "dataset with a failure probability."
@@ -553,7 +553,7 @@ elif section == "ML Model Results":
     st.pyplot(fig_imp, use_container_width=True)
     plt.close(fig_imp)
     chart_caption(
-        "Gradient Boosting feature importances measure how much each variable reduces "
+        "XGBoost feature importances measure how much each variable reduces "
         "prediction error across all decision trees. Sponsor historical failure rate and "
         "phase rank consistently rank highest, confirming that who runs the trial and at what "
         "stage matters more than the disease area or enrollment size."
