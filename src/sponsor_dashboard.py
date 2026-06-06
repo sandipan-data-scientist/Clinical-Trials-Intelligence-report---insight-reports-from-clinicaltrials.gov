@@ -17,7 +17,7 @@ C_RED    = "#E84855"
 C_GREEN  = "#3BB273"
 C_ORANGE = "#FAA916"
 C_PURPLE = "#9B5DE5"
-C_BG     = "#F8F9FA"
+C_BG     = "#FFFFFF"
 C_WHITE  = "#FFFFFF"
 
 
@@ -81,26 +81,26 @@ class SponsorDashboard:
         ax_hdr.set_facecolor(C_BLUE)
         ax_hdr.axis("off")
         ax_hdr.text(0.5, 0.80, "Clinical Trial Sponsor Intelligence Report",
-                    ha="center", va="center", fontsize=12, color="white",
+                    ha="center", va="center", fontsize=21, color="#8E000C",
                     transform=ax_hdr.transAxes)
         ax_hdr.text(0.5, 0.45, name, ha="center", va="center",
-                    fontsize=20, fontweight="bold", color="white",
+                    fontsize=27, fontweight="bold", color="#850052",
                     transform=ax_hdr.transAxes)
         metric_items = [
-            ("Total Trials",     str(summ["Total Trials"]),     "white"),
-            ("Completed",        str(summ["Completed"]),         "#90EE90"),
-            ("Terminated",       str(summ["Terminated"]),        "#FFB6B6"),
-            ("Active",           str(summ["Active"]),            "#ADD8E6"),
-            ("Failure Rate",     f"{summ['Failure Rate']}%",    "#FFD700"),
-            ("Model Risk Score", f"{summ['Model Avg Risk']}%",  "#FFA07A"),
-            ("Median Enrollment",str(int(summ["Median Enrollment"])), "white"),
-            ("Median Duration",  f"{int(summ['Median Duration'])}m","white"),
+            ("Total Trials",     str(summ["Total Trials"]),     "#540D34"),
+            ("Completed",        str(summ["Completed"]),         "#008E00"),
+            ("Terminated",       str(summ["Terminated"]),        "#B80202"),
+            ("Active",           str(summ["Active"]),            "#0084B0"),
+            ("Failure Rate",     f"{summ['Failure Rate']}%",    "#6E5E02"),
+            ("Model Risk Score", f"{summ['Model Avg Risk']}%",  "#AB3405"),
+            ("Median Enrollment",str(int(summ["Median Enrollment"])), "#09008E"),
+            ("Median Duration",  f"{int(summ['Median Duration'])}m","#6A0068"),
         ]
         xpos = np.linspace(0.04, 0.96, len(metric_items))
         for x, (label, value, color) in zip(xpos, metric_items):
-            ax_hdr.text(x, 0.08, value, ha="center", fontsize=13, fontweight="bold",
+            ax_hdr.text(x, 0.08, value, ha="center", fontsize=21, fontweight="bold",
                         color=color, transform=ax_hdr.transAxes)
-            ax_hdr.text(x, -0.12, label, ha="center", fontsize=7.5, color="#DDDDDD",
+            ax_hdr.text(x, -0.12, label, ha="center", fontsize=14, color="#000000",
                         transform=ax_hdr.transAxes)
 
         # panel 1: trial volume by year stacked by status
