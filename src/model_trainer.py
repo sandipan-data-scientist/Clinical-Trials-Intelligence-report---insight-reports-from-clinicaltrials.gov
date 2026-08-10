@@ -90,11 +90,18 @@ class ModelTrainer:
         self.best_model      = self.models[self.best_model_name][0]
         return self.results
 
-    def score_full_dataset(self, X_all: np.ndarray) -> np.ndarray:
-        """Returns predicted failure probabilities for every trial in the full dataset."""
-        if self.best_model is None:
-            raise RuntimeError("Call train_all() before scoring.")
-        return self.best_model.predict_proba(X_all)[:, 1]
+    # def score_full_dataset(self, X_all: np.ndarray) -> np.ndarray:
+    #     """Returns predicted failure probabilities for every trial in the full dataset."""
+    #     if self.best_model is None:
+    #         raise RuntimeError("Call train_all() before scoring.")
+    #     return self.best_model.predict_proba(X_all)[:, 1]
+
+    def score_full_dataset(self, X_all):
+        if self.best_model_name == "Logistic Regression":
+            X_scoring = self.scaler.transform(X_all)   # LR needs scaled input
+        else:
+            X_scoring = X_all                           # RF and GB are scale-invariant
+        return self.best_model.predict_proba(X_scoring)[:, 1]
 
     def get_roc_data(self) -> Dict:
         """Returns FPR/TPR arrays for each model for ROC curve plotting."""

@@ -83,7 +83,7 @@ def load_and_clean_data():
 
 
 @st.cache_resource(show_spinner=False)
-def train_model(df_clean):
+def train_model(_df_clean):
     """
     Trains the GradientBoosting model. Cached as a resource so
     the model object is reused across reruns without retraining.
@@ -128,7 +128,7 @@ viz = Visualizer(df)
 with st.sidebar:
     st.image(
         "https://crir.ca/wp-content/uploads/2020/05/nihclinicaltrials.png",
-        use_column_width=True
+        use_container_width=True
     )
     st.markdown("### Navigation")
     section = st.radio(
